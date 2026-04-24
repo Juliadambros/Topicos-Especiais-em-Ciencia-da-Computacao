@@ -1,0 +1,24 @@
+
+1) As 5 imagens logo após os 25 documentos
+INDICES_QUERIES = [25, 26, 27, 28, 29]
+
+2) Próximas 5 imagens
+INDICES_QUERIES = [30, 31, 32, 33, 34]
+
+3) Mais longes
+INDICES_QUERIES = [50, 60, 70, 80, 90]
+
+4)variadas
+INDICES_QUERIES = [100, 150, 200, 250, 300]
+
+5) Queries aleatórias pequenas
+INDICES_QUERIES = [40, 55, 73, 88, 99]
+
+6) Queries médias
+INDICES_QUERIES = [120, 135, 148, 160, 175]
+
+7) Queries altas
+INDICES_QUERIES = [300, 350, 400, 450, 500]
+
+8) Queries extremas
+INDICES_QUERIES = [700, 800, 900, 1000, 1100]
