@@ -2,36 +2,74 @@ import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
 
 IMG_SIZE = 224
-PESO_VISUAL = 0.7
-PESO_IOU = 0.3
-PASTA_RESULTADOS = "recuperação de imagens/resultados"
+
+PASTA_BASE = "recuperação de imagens/resultados"
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+PASTA_RESULTADOS = os.path.join(
+    PASTA_BASE,
+    f"execucao_{timestamp}"
+)
 
 os.makedirs(PASTA_RESULTADOS, exist_ok=True)
 
 
 def preprocessar_imagem(img_pil):
-    #redimensiona a imagem e converte para RGB
     img = img_pil.convert("RGB")
     img = img.resize((IMG_SIZE, IMG_SIZE))
     return np.array(img)
 
 
-def gerar_regioes_grid():
-    #gera regiões candidatas fixas, cada região é uma caixa: x, y, largura, altura
-    return [
-        (0, 0, 224, 224), # imagem inteira
-        (56, 56, 112, 112), # centro
-        (0, 0, 112, 112), # superior esquerdo
-        (112, 0, 112, 112), # superior direito
-        (0, 112, 112, 112), # inferior esquerdo
-        (112, 112, 112, 112), # inferior direito
-    ]
+def selecionar_regiao_query(img):
+    img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+
+    bbox = cv2.selectROI(
+        "Selecione a regiao da query e pressione ENTER",
+        img_bgr,
+        fromCenter=False,
+        showCrosshair=True
+    )
+
+    cv2.destroyWindow("Selecione a regiao da query e pressione ENTER")
+
+    x, y, w, h = bbox
+
+    if w == 0 or h == 0:
+        print("Nenhuma região selecionada. Usando centro como padrão.")
+        return (56, 56, 112, 112)
+
+    return (int(x), int(y), int(w), int(h))
+
+
+def gerar_regioes_grid(img_size=IMG_SIZE, grid_size=3):
+    #Gera automaticamente regiões candidatas nos documentos: imagem inteira, regiões da grade 3x3
+    regioes = []
+
+    # adiciona a imagem inteira
+    regioes.append((0, 0, img_size, img_size))
+
+    largura_celula = img_size // grid_size
+    altura_celula = img_size // grid_size
+
+    for linha in range(grid_size):
+        for coluna in range(grid_size):
+            x = coluna * largura_celula
+            y = linha * altura_celula
+
+            w = largura_celula
+            h = altura_celula
+
+            regioes.append((x, y, w, h))
+
+    return regioes
 
 
 def extrair_descritor_cor(img, bbox):
+    #Representa numericamente cor e aparência da área
     x, y, w, h = bbox
     regiao = img[y:y+h, x:x+w]
 
@@ -40,14 +78,12 @@ def extrair_descritor_cor(img, bbox):
     hist_b = cv2.calcHist([regiao], [2], None, [32], [0, 256])
 
     hist = np.concatenate([hist_r, hist_g, hist_b]).flatten()
-    # Normalização
     hist = hist / (np.linalg.norm(hist) + 1e-8)
 
     return hist
 
 
 def calcular_iou(box_a, box_b):
-    #IoU = área de interseção / área de união.
     xA = max(box_a[0], box_b[0])
     yA = max(box_a[1], box_b[1])
     xB = min(box_a[0] + box_a[2], box_b[0] + box_b[2])
@@ -68,16 +104,22 @@ def calcular_iou(box_a, box_b):
 
 
 def indexar_documentos(imagens_documentos):
-    #Para cada imagem do banco, gera regiões candidatas, extrai descritores e armazena tudo em uma lista.
+    #Para cada imagem documento: gera regiões, extrai descritores, armazena tudo no índice
     indice = []
     regioes = gerar_regioes_grid()
 
-    for doc_id, img in enumerate(imagens_documentos):
+    for doc_id, doc in enumerate(imagens_documentos):
+        img = doc["imagem"]
+        label = doc["label"]
+        indice_original = doc["indice_original"]
+
         for bbox in regioes:
             descritor = extrair_descritor_cor(img, bbox)
 
             indice.append({
                 "doc_id": doc_id,
+                "indice_original": indice_original,
+                "label": label,
                 "bbox": bbox,
                 "descritor": descritor,
                 "imagem": img
@@ -85,12 +127,14 @@ def indexar_documentos(imagens_documentos):
 
     return indice
 
+#Compara query com todas regiões indexadas
+def buscar_query(query_img, indice, top_k=5, bbox_query=None):
+    if bbox_query is None:
+        bbox_query = (56, 56, 112, 112)
 
-def buscar_query(query_img, indice, top_k=5, bbox_query=(56, 56, 112, 112)): # região central da query
-    #Compara a query com todas as regiões indexadas. Score final: 70% similaridade visual 30% IoU
     descritor_query = extrair_descritor_cor(query_img, bbox_query)
 
-    resultados = []
+    candidatos = []
 
     for item in indice:
         similaridade_visual = cosine_similarity(
@@ -100,53 +144,133 @@ def buscar_query(query_img, indice, top_k=5, bbox_query=(56, 56, 112, 112)): # r
 
         iou = calcular_iou(bbox_query, item["bbox"])
 
-        score_final = (PESO_VISUAL * similaridade_visual) + (PESO_IOU * iou)
-
-        resultados.append({
+        candidatos.append({
             "doc_id": item["doc_id"],
+            "indice_original": item["indice_original"],
+            "label": item["label"],
             "imagem": item["imagem"],
             "bbox": item["bbox"],
             "similaridade_visual": similaridade_visual,
-            "iou": iou,
-            "score_final": score_final
+            "iou": iou
         })
 
-    resultados = sorted(resultados, key=lambda x: x["score_final"], reverse=True)
-    return resultados[:top_k]
+    ranking_score = gerar_ranking_sem_repetir(
+        candidatos,
+        chave_ordenacao="similaridade_visual",
+        top_k=top_k
+    )
+
+    ranking_iou = gerar_ranking_sem_repetir(
+        candidatos,
+        chave_ordenacao="iou",
+        top_k=top_k
+    )
+
+    return ranking_score, ranking_iou
+
+
+def gerar_ranking_sem_repetir(candidatos, chave_ordenacao, top_k=5):
+    if chave_ordenacao == "iou":
+        candidatos_ordenados = sorted(
+            candidatos,
+            key=lambda x: (x["iou"], x["similaridade_visual"]),
+            reverse=True
+        )
+    else:
+        candidatos_ordenados = sorted(
+            candidatos,
+            key=lambda x: x[chave_ordenacao],
+            reverse=True
+        )
+
+    resultados = []
+    documentos_usados = set()
+
+    for cand in candidatos_ordenados:
+        if cand["doc_id"] not in documentos_usados:
+            resultados.append(cand)
+            documentos_usados.add(cand["doc_id"])
+
+        if len(resultados) == top_k:
+            break
+
+    return resultados
 
 
 def desenhar_caixa(img, bbox):
     img_copy = img.copy()
     x, y, w, h = bbox
 
-    cv2.rectangle(img_copy, (x, y), (x + w, y + h), (255, 0, 0), 2)
+    cv2.rectangle(
+        img_copy,
+        (x, y),
+        (x + w, y + h),
+        (255, 0, 0),
+        2
+    )
 
     return img_copy
 
 
-def salvar_resultados(query_img, resultados, nome_query):
-    plt.figure(figsize=(15, 4))
+def salvar_resultados(
+    query_img,
+    resultados,
+    nome_query,
+    indice_query=None,
+    label_query=None,
+    bbox_query=None,
+    titulo_ranking="Ranking"
+):
+    if bbox_query is None:
+        bbox_query = (56, 56, 112, 112)
+
+    plt.figure(figsize=(16, 4))
+
+    query_com_caixa = desenhar_caixa(query_img, bbox_query)
 
     plt.subplot(1, 6, 1)
-    plt.imshow(query_img)
-    plt.title(f"Query {nome_query}")
+    plt.imshow(query_com_caixa)
+
+    titulo = f"{titulo_ranking}\nQuery\nIdx: {indice_query}"
+
+    if label_query is not None:
+        titulo += f"\nClasse: {label_query}"
+
+    plt.title(titulo, fontsize=9)
     plt.axis("off")
 
     for i, res in enumerate(resultados):
-        img_com_caixa = desenhar_caixa(res["imagem"], res["bbox"])
+        if "IoU" in titulo_ranking:
+            img = desenhar_caixa(res["imagem"], res["bbox"])
+        else:
+            img = res["imagem"]
 
         plt.subplot(1, 6, i + 2)
-        plt.imshow(img_com_caixa)
-        plt.title(
-            f"Top {i+1}\n"
-            f"Score: {res['score_final']:.2f}\n"
-            f"IoU: {res['iou']:.2f}"
-        )
+        plt.imshow(img)
+
+        if "IoU" in titulo_ranking:
+            texto = (
+                f"Top {i+1}\n"
+                f"Idx: {res['indice_original']}\n"
+                f"IoU: {res['iou']:.2f}"
+            )
+        else:
+            texto = (
+                f"Top {i+1}\n"
+                f"Idx: {res['indice_original']}\n"
+                f"Sim: {res['similaridade_visual']:.2f}"
+            )
+
+        plt.title(texto, fontsize=9)
         plt.axis("off")
 
-    caminho = os.path.join(PASTA_RESULTADOS, f"resultado_{nome_query}.png")
+    caminho = os.path.join(
+        PASTA_RESULTADOS,
+        f"resultado_{nome_query}.png"
+    )
+
     plt.tight_layout()
-    plt.savefig(caminho)
+    plt.savefig(caminho, dpi=150)
     plt.close()
 
-    print(f"Resultado salvo em: {caminho}")
+    print(f"Imagem salva em: {caminho}")
