@@ -4,17 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
+from pos_processamento import aplicar_pos_processamento_contexto
 
 IMG_SIZE = 224
 
-PASTA_BASE = "recuperação de imagens/resultados"
+PASTA_BASE = "resultados"
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-PASTA_RESULTADOS = os.path.join(
-    PASTA_BASE,
-    f"execucao_{timestamp}"
-)
-
+PASTA_RESULTADOS = os.path.join(PASTA_BASE, f"execucao_{timestamp}")
 os.makedirs(PASTA_RESULTADOS, exist_ok=True)
 
 
@@ -46,11 +43,7 @@ def selecionar_regiao_query(img):
 
 
 def gerar_regioes_grid(img_size=IMG_SIZE, grid_size=3):
-    #Gera automaticamente regiões candidatas nos documentos: imagem inteira, regiões da grade 3x3
-    regioes = []
-
-    # adiciona a imagem inteira
-    regioes.append((0, 0, img_size, img_size))
+    regioes = [(0, 0, img_size, img_size)]
 
     largura_celula = img_size // grid_size
     altura_celula = img_size // grid_size
@@ -59,17 +52,12 @@ def gerar_regioes_grid(img_size=IMG_SIZE, grid_size=3):
         for coluna in range(grid_size):
             x = coluna * largura_celula
             y = linha * altura_celula
-
-            w = largura_celula
-            h = altura_celula
-
-            regioes.append((x, y, w, h))
+            regioes.append((x, y, largura_celula, altura_celula))
 
     return regioes
 
 
 def extrair_descritor_cor(img, bbox):
-    #Representa numericamente cor e aparência da área
     x, y, w, h = bbox
     regiao = img[y:y+h, x:x+w]
 
@@ -104,31 +92,26 @@ def calcular_iou(box_a, box_b):
 
 
 def indexar_documentos(imagens_documentos):
-    #Para cada imagem documento: gera regiões, extrai descritores, armazena tudo no índice
     indice = []
     regioes = gerar_regioes_grid()
 
     for doc_id, doc in enumerate(imagens_documentos):
-        img = doc["imagem"]
-        label = doc["label"]
-        indice_original = doc["indice_original"]
-
         for bbox in regioes:
-            descritor = extrair_descritor_cor(img, bbox)
+            descritor = extrair_descritor_cor(doc["imagem"], bbox)
 
             indice.append({
                 "doc_id": doc_id,
-                "indice_original": indice_original,
-                "label": label,
+                "indice_original": doc["indice_original"],
+                "label": doc["label"],
                 "bbox": bbox,
                 "descritor": descritor,
-                "imagem": img
+                "imagem": doc["imagem"]
             })
 
     return indice
 
-#Compara query com todas regiões indexadas
-def buscar_query(query_img, indice, top_k=5, bbox_query=None):
+
+def buscar_query(query_img, indice, top_k=5, bbox_query=None, nome_query=None):
     if bbox_query is None:
         bbox_query = (56, 56, 112, 112)
 
@@ -150,14 +133,22 @@ def buscar_query(query_img, indice, top_k=5, bbox_query=None):
             "label": item["label"],
             "imagem": item["imagem"],
             "bbox": item["bbox"],
+            "descritor": item["descritor"],
             "similaridade_visual": similaridade_visual,
             "iou": iou
         })
 
-    ranking_score = gerar_ranking_sem_repetir(
+    ranking_original = gerar_ranking_sem_repetir(
         candidatos,
         chave_ordenacao="similaridade_visual",
         top_k=top_k
+    )
+
+    ranking_pos = aplicar_pos_processamento_contexto(
+        candidatos=candidatos,
+        nome_query=nome_query,
+        top_k=top_k,
+        bonus_contexto=0.20
     )
 
     ranking_iou = gerar_ranking_sem_repetir(
@@ -166,7 +157,7 @@ def buscar_query(query_img, indice, top_k=5, bbox_query=None):
         top_k=top_k
     )
 
-    return ranking_score, ranking_iou
+    return ranking_original, ranking_pos, ranking_iou
 
 
 def gerar_ranking_sem_repetir(candidatos, chave_ordenacao, top_k=5):
@@ -255,19 +246,21 @@ def salvar_resultados(
                 f"IoU: {res['iou']:.2f}"
             )
         else:
+            score_final = res.get("score_final", res["similaridade_visual"])
+            bonus = res.get("bonus_contexto", 0)
+
             texto = (
                 f"Top {i+1}\n"
                 f"Idx: {res['indice_original']}\n"
-                f"Sim: {res['similaridade_visual']:.2f}"
+                f"Sim: {res['similaridade_visual']:.2f}\n"
+                f"Bonus: {bonus:.2f}\n"
+                f"Final: {score_final:.2f}"
             )
 
-        plt.title(texto, fontsize=9)
+        plt.title(texto, fontsize=8)
         plt.axis("off")
 
-    caminho = os.path.join(
-        PASTA_RESULTADOS,
-        f"resultado_{nome_query}.png"
-    )
+    caminho = os.path.join(PASTA_RESULTADOS, f"resultado_{nome_query}.png")
 
     plt.tight_layout()
     plt.savefig(caminho, dpi=150)

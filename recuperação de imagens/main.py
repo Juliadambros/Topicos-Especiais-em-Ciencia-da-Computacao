@@ -38,7 +38,6 @@ def main():
     print("Preparando documentos...")
     imagens_documentos = []
 
-    # Carrega documentos escolhidos
     for nome_doc in INDICES_DOCUMENTOS:
 
         arquivo = f"{nome_doc}.jpg"
@@ -48,7 +47,6 @@ def main():
             continue
 
         img_pil = dataset[arquivo]
-
         img = preprocessar_imagem(img_pil)
 
         imagens_documentos.append({
@@ -60,12 +58,10 @@ def main():
     print(f"Total de documentos: {len(imagens_documentos)}")
 
     print("Indexando documentos...")
-
     indice = indexar_documentos(imagens_documentos)
 
     print(f"Total de regiões indexadas: {len(indice)}")
 
-    # Executa buscas
     for nome_query in INDICES_QUERIES:
 
         arquivo_query = f"{nome_query}.jpg"
@@ -75,28 +71,38 @@ def main():
             continue
 
         img_pil = dataset[arquivo_query]
-
         query_img = preprocessar_imagem(img_pil)
 
         print(f"\nBuscando query: {nome_query}")
 
         bbox_query = selecionar_regiao_query(query_img)
 
-        ranking_score, ranking_iou = buscar_query(
+        ranking_original, ranking_pos, ranking_iou = buscar_query(
             query_img,
             indice,
             top_k=5,
-            bbox_query=bbox_query
+            bbox_query=bbox_query,
+            nome_query=nome_query
         )
 
         salvar_resultados(
             query_img,
-            ranking_score,
-            nome_query=f"score_query_{nome_query}",
+            ranking_original,
+            nome_query=f"original_query_{nome_query}",
             indice_query=nome_query,
             label_query=nome_query,
             bbox_query=bbox_query,
-            titulo_ranking="Ranking por Similaridade"
+            titulo_ranking="Ranking Original"
+        )
+
+        salvar_resultados(
+            query_img,
+            ranking_pos,
+            nome_query=f"pos_query_{nome_query}",
+            indice_query=nome_query,
+            label_query=nome_query,
+            bbox_query=bbox_query,
+            titulo_ranking="Ranking Pos-Processado"
         )
 
         salvar_resultados(
