@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
 from pos_processamento import aplicar_pos_processamento_contexto
+from pos_processamento import aplicar_pos_processamento_contexto
+from pos_processamento_cluster import aplicar_pos_processamento_cluster
 
 IMG_SIZE = 224
 
@@ -144,11 +146,19 @@ def buscar_query(query_img, indice, top_k=5, bbox_query=None, nome_query=None):
         top_k=top_k
     )
 
-    ranking_pos = aplicar_pos_processamento_contexto(
+    ranking_pos_contexto = aplicar_pos_processamento_contexto(
         candidatos=candidatos,
         nome_query=nome_query,
         top_k=top_k,
         bonus_contexto=0.20
+    )
+
+    ranking_pos_cluster = aplicar_pos_processamento_cluster(
+        candidatos=candidatos,
+        descritor_query=descritor_query,
+        top_k=top_k,
+        n_clusters=3,
+        bonus_cluster=0.15
     )
 
     ranking_iou = gerar_ranking_sem_repetir(
@@ -157,7 +167,8 @@ def buscar_query(query_img, indice, top_k=5, bbox_query=None, nome_query=None):
         top_k=top_k
     )
 
-    return ranking_original, ranking_pos, ranking_iou
+    return ranking_original, ranking_pos_contexto, ranking_pos_cluster, ranking_iou
+
 
 
 def gerar_ranking_sem_repetir(candidatos, chave_ordenacao, top_k=5):
@@ -247,7 +258,7 @@ def salvar_resultados(
             )
         else:
             score_final = res.get("score_final", res["similaridade_visual"])
-            bonus = res.get("bonus_contexto", 0)
+            bonus = res.get("bonus_contexto", res.get("bonus_cluster", 0))
 
             texto = (
                 f"Top {i+1}\n"

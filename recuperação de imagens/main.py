@@ -77,7 +77,7 @@ def main():
 
         bbox_query = selecionar_regiao_query(query_img)
 
-        ranking_original, ranking_pos, ranking_iou = buscar_query(
+        ranking_original, ranking_pos_contexto, ranking_pos_cluster, ranking_iou = buscar_query(
             query_img,
             indice,
             top_k=5,
@@ -97,12 +97,22 @@ def main():
 
         salvar_resultados(
             query_img,
-            ranking_pos,
-            nome_query=f"pos_query_{nome_query}",
+            ranking_pos_contexto,
+            nome_query=f"pos_contexto_query_{nome_query}",
             indice_query=nome_query,
             label_query=nome_query,
             bbox_query=bbox_query,
-            titulo_ranking="Ranking Pos-Processado"
+            titulo_ranking="Ranking Pos-Processado Contexto"
+        )
+
+        salvar_resultados(
+            query_img,
+            ranking_pos_cluster,
+            nome_query=f"pos_cluster_query_{nome_query}",
+            indice_query=nome_query,
+            label_query=nome_query,
+            bbox_query=bbox_query,
+            titulo_ranking="Ranking Pos-Processado Cluster"
         )
 
         salvar_resultados(
