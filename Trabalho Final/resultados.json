@@ -1,0 +1,1880 @@
+{
+  "paginas": [
+    {
+      "id": "A",
+      "titulo": "Portal Livros & Telas",
+      "texto": "portal geral sobre livros e suas adaptações para cinema e séries com notícias e resenhas variadas",
+      "links": [
+        "B",
+        "D",
+        "F",
+        "H",
+        "K"
+      ]
+    },
+    {
+      "id": "B",
+      "titulo": "Resenha: O Hobbit (livro)",
+      "texto": "resenha do livro o hobbit de jrr tolkien uma aventura de fantasia com a jornada inesperada de bilbo bolseiro",
+      "links": [
+        "C"
+      ]
+    },
+    {
+      "id": "C",
+      "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+      "texto": "resenha da trilogia de filmes o hobbit dirigida por peter jackson adaptação do livro de tolkien para o cinema",
+      "links": [
+        "B"
+      ]
+    },
+    {
+      "id": "D",
+      "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+      "texto": "resenha do livro harry potter e a pedra filosofal escrito por jk rowling magia e o universo de hogwarts",
+      "links": [
+        "E"
+      ]
+    },
+    {
+      "id": "E",
+      "titulo": "Resenha: Harry Potter (filmes)",
+      "texto": "resenha dos filmes de harry potter adaptação dos livros de jk rowling para o cinema com elenco e direção",
+      "links": [
+        "D"
+      ]
+    },
+    {
+      "id": "F",
+      "titulo": "Resenha: Duna (livro)",
+      "texto": "resenha do livro duna escrito por frank herbert ficção científica no planeta deserto de arrakis",
+      "links": [
+        "G"
+      ]
+    },
+    {
+      "id": "G",
+      "titulo": "Resenha: Duna (filme 2021)",
+      "texto": "resenha do filme duna de 2021 dirigido por denis villeneuve adaptação do livro de frank herbert para o cinema",
+      "links": [
+        "F"
+      ]
+    },
+    {
+      "id": "H",
+      "titulo": "Top 10 Adaptações de Livros",
+      "texto": "lista top 10 melhores adaptações de livros para filmes confira agora a lista definitiva cliquem aqui adaptações adaptações imperdível",
+      "links": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "I",
+        "J",
+        "K"
+      ]
+    },
+    {
+      "id": "I",
+      "titulo": "Blog de Curadoria Literária",
+      "texto": "blog de curadoria literária com indicações das melhores adaptações de livros para o cinema análises profundas e comparação com as obras originais",
+      "links": [
+        "F",
+        "D"
+      ]
+    },
+    {
+      "id": "J",
+      "titulo": "Loja Livros & Filmes",
+      "texto": "loja virtual compre livros e filmes em blu-ray edições especiais com frete grátis e promoção por tempo limitado",
+      "links": [
+        "B",
+        "D",
+        "F",
+        "H"
+      ]
+    },
+    {
+      "id": "K",
+      "titulo": "Notícias de Adaptações 2026",
+      "texto": "notícias sobre as próximas adaptações de livros para filmes e séries em 2026 com anúncios de elenco e datas de estreia",
+      "links": [
+        "A",
+        "H"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "origem": "A",
+      "destino": "B"
+    },
+    {
+      "origem": "A",
+      "destino": "D"
+    },
+    {
+      "origem": "A",
+      "destino": "F"
+    },
+    {
+      "origem": "A",
+      "destino": "H"
+    },
+    {
+      "origem": "A",
+      "destino": "K"
+    },
+    {
+      "origem": "B",
+      "destino": "C"
+    },
+    {
+      "origem": "D",
+      "destino": "E"
+    },
+    {
+      "origem": "F",
+      "destino": "G"
+    },
+    {
+      "origem": "H",
+      "destino": "B"
+    },
+    {
+      "origem": "H",
+      "destino": "C"
+    },
+    {
+      "origem": "H",
+      "destino": "D"
+    },
+    {
+      "origem": "H",
+      "destino": "E"
+    },
+    {
+      "origem": "H",
+      "destino": "F"
+    },
+    {
+      "origem": "H",
+      "destino": "G"
+    },
+    {
+      "origem": "H",
+      "destino": "I"
+    },
+    {
+      "origem": "H",
+      "destino": "J"
+    },
+    {
+      "origem": "H",
+      "destino": "K"
+    },
+    {
+      "origem": "K",
+      "destino": "A"
+    },
+    {
+      "origem": "K",
+      "destino": "H"
+    },
+    {
+      "origem": "C",
+      "destino": "B"
+    },
+    {
+      "origem": "E",
+      "destino": "D"
+    },
+    {
+      "origem": "G",
+      "destino": "F"
+    },
+    {
+      "origem": "I",
+      "destino": "F"
+    },
+    {
+      "origem": "I",
+      "destino": "D"
+    },
+    {
+      "origem": "J",
+      "destino": "B"
+    },
+    {
+      "origem": "J",
+      "destino": "D"
+    },
+    {
+      "origem": "J",
+      "destino": "F"
+    },
+    {
+      "origem": "J",
+      "destino": "H"
+    }
+  ],
+  "graus": [
+    {
+      "id": "D",
+      "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+      "links_recebidos": 5,
+      "links_enviados": 1
+    },
+    {
+      "id": "F",
+      "titulo": "Resenha: Duna (livro)",
+      "links_recebidos": 5,
+      "links_enviados": 1
+    },
+    {
+      "id": "B",
+      "titulo": "Resenha: O Hobbit (livro)",
+      "links_recebidos": 4,
+      "links_enviados": 1
+    },
+    {
+      "id": "H",
+      "titulo": "Top 10 Adaptações de Livros",
+      "links_recebidos": 3,
+      "links_enviados": 9
+    },
+    {
+      "id": "K",
+      "titulo": "Notícias de Adaptações 2026",
+      "links_recebidos": 2,
+      "links_enviados": 2
+    },
+    {
+      "id": "C",
+      "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+      "links_recebidos": 2,
+      "links_enviados": 1
+    },
+    {
+      "id": "E",
+      "titulo": "Resenha: Harry Potter (filmes)",
+      "links_recebidos": 2,
+      "links_enviados": 1
+    },
+    {
+      "id": "G",
+      "titulo": "Resenha: Duna (filme 2021)",
+      "links_recebidos": 2,
+      "links_enviados": 1
+    },
+    {
+      "id": "A",
+      "titulo": "Portal Livros & Telas",
+      "links_recebidos": 1,
+      "links_enviados": 5
+    },
+    {
+      "id": "I",
+      "titulo": "Blog de Curadoria Literária",
+      "links_recebidos": 1,
+      "links_enviados": 2
+    },
+    {
+      "id": "J",
+      "titulo": "Loja Livros & Filmes",
+      "links_recebidos": 1,
+      "links_enviados": 4
+    }
+  ],
+  "pagerank": [
+    {
+      "id": "D",
+      "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+      "pagerank": 0.160814,
+      "posicao_pagerank": 1
+    },
+    {
+      "id": "F",
+      "titulo": "Resenha: Duna (livro)",
+      "pagerank": 0.160814,
+      "posicao_pagerank": 2
+    },
+    {
+      "id": "E",
+      "titulo": "Resenha: Harry Potter (filmes)",
+      "pagerank": 0.153112,
+      "posicao_pagerank": 3
+    },
+    {
+      "id": "G",
+      "titulo": "Resenha: Duna (filme 2021)",
+      "pagerank": 0.153112,
+      "posicao_pagerank": 4
+    },
+    {
+      "id": "B",
+      "titulo": "Resenha: O Hobbit (livro)",
+      "pagerank": 0.135664,
+      "posicao_pagerank": 5
+    },
+    {
+      "id": "C",
+      "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+      "pagerank": 0.131735,
+      "posicao_pagerank": 6
+    },
+    {
+      "id": "H",
+      "titulo": "Top 10 Adaptações de Livros",
+      "pagerank": 0.029488,
+      "posicao_pagerank": 7
+    },
+    {
+      "id": "A",
+      "titulo": "Portal Livros & Telas",
+      "pagerank": 0.022221,
+      "posicao_pagerank": 8
+    },
+    {
+      "id": "K",
+      "titulo": "Notícias de Adaptações 2026",
+      "pagerank": 0.020199,
+      "posicao_pagerank": 9
+    },
+    {
+      "id": "I",
+      "titulo": "Blog de Curadoria Literária",
+      "pagerank": 0.016421,
+      "posicao_pagerank": 10
+    },
+    {
+      "id": "J",
+      "titulo": "Loja Livros & Filmes",
+      "pagerank": 0.016421,
+      "posicao_pagerank": 11
+    }
+  ],
+  "hits_authority": [
+    {
+      "posicao_authority": 1,
+      "id": "F",
+      "titulo": "Resenha: Duna (livro)",
+      "authority": 0.174333
+    },
+    {
+      "posicao_authority": 2,
+      "id": "D",
+      "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+      "authority": 0.174333
+    },
+    {
+      "posicao_authority": 3,
+      "id": "B",
+      "titulo": "Resenha: O Hobbit (livro)",
+      "authority": 0.150325
+    },
+    {
+      "posicao_authority": 4,
+      "id": "K",
+      "titulo": "Notícias de Adaptações 2026",
+      "authority": 0.1028
+    },
+    {
+      "posicao_authority": 5,
+      "id": "H",
+      "titulo": "Top 10 Adaptações de Livros",
+      "authority": 0.088391
+    },
+    {
+      "posicao_authority": 6,
+      "id": "E",
+      "titulo": "Resenha: Harry Potter (filmes)",
+      "authority": 0.062353
+    },
+    {
+      "posicao_authority": 7,
+      "id": "C",
+      "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+      "authority": 0.062353
+    },
+    {
+      "posicao_authority": 8,
+      "id": "G",
+      "titulo": "Resenha: Duna (filme 2021)",
+      "authority": 0.062353
+    },
+    {
+      "posicao_authority": 9,
+      "id": "I",
+      "titulo": "Blog de Curadoria Literária",
+      "authority": 0.058336
+    },
+    {
+      "posicao_authority": 10,
+      "id": "J",
+      "titulo": "Loja Livros & Filmes",
+      "authority": 0.058336
+    },
+    {
+      "posicao_authority": 11,
+      "id": "A",
+      "titulo": "Portal Livros & Telas",
+      "authority": 0.006086
+    }
+  ],
+  "hits_hub": [
+    {
+      "posicao_hub": 1,
+      "id": "H",
+      "titulo": "Top 10 Adaptações de Livros",
+      "hub": 0.273383
+    },
+    {
+      "posicao_hub": 2,
+      "id": "A",
+      "titulo": "Portal Livros & Telas",
+      "hub": 0.20837
+    },
+    {
+      "posicao_hub": 3,
+      "id": "J",
+      "titulo": "Loja Livros & Filmes",
+      "hub": 0.177335
+    },
+    {
+      "posicao_hub": 4,
+      "id": "I",
+      "titulo": "Blog de Curadoria Literária",
+      "hub": 0.105265
+    },
+    {
+      "posicao_hub": 5,
+      "id": "G",
+      "titulo": "Resenha: Duna (filme 2021)",
+      "hub": 0.052632
+    },
+    {
+      "posicao_hub": 6,
+      "id": "E",
+      "titulo": "Resenha: Harry Potter (filmes)",
+      "hub": 0.052632
+    },
+    {
+      "posicao_hub": 7,
+      "id": "C",
+      "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+      "hub": 0.045384
+    },
+    {
+      "posicao_hub": 8,
+      "id": "K",
+      "titulo": "Notícias de Adaptações 2026",
+      "hub": 0.028523
+    },
+    {
+      "posicao_hub": 9,
+      "id": "D",
+      "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+      "hub": 0.018825
+    },
+    {
+      "posicao_hub": 10,
+      "id": "B",
+      "titulo": "Resenha: O Hobbit (livro)",
+      "hub": 0.018825
+    },
+    {
+      "posicao_hub": 11,
+      "id": "F",
+      "titulo": "Resenha: Duna (livro)",
+      "hub": 0.018825
+    }
+  ],
+  "parametros_melhoria": {
+    "media_out_degree": 2.5455,
+    "limiar_out_degree": 5.0909,
+    "limiar_in_degree_baixo": 1,
+    "limiar_score_texto_alto": 0.5,
+    "penalidade_lista_rasa": 0.5,
+    "bonus_conteudo_esquecido": 0.3,
+    "pesos": {
+      "texto": 0.55,
+      "pagerank": 0.25,
+      "authority": 0.2
+    }
+  },
+  "consultas": [
+    {
+      "nome": "Duna: livro e filme",
+      "consulta": "livro duna filme",
+      "relevantes": [
+        "F",
+        "G"
+      ],
+      "ranking_texto": [
+        {
+          "posicao_texto": 1,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto": 0.425206,
+          "relevante": true
+        },
+        {
+          "posicao_texto": 2,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto": 0.233907,
+          "relevante": true
+        },
+        {
+          "posicao_texto": 3,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto": 0.079737,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 4,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto": 0.079349,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 5,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto": 0.072052,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 6,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 7,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 8,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 9,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 10,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 11,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto": 0.0,
+          "relevante": false
+        }
+      ],
+      "ranking_antes": [
+        {
+          "posicao_antes": 1,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto_norm": 1.0,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.859559,
+          "relevante": true
+        },
+        {
+          "posicao_antes": 2,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto_norm": 0.550103,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 0.752557,
+          "relevante": true
+        },
+        {
+          "posicao_antes": 3,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto_norm": 0.186612,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 0.552637,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 4,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto_norm": 0.169452,
+          "pagerank_norm": 0.843606,
+          "authority_norm": 0.862282,
+          "score_final": 0.476556,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 5,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto_norm": 0.187527,
+          "pagerank_norm": 0.819175,
+          "authority_norm": 0.357666,
+          "score_final": 0.379467,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 6,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.309559,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 7,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.125604,
+          "authority_norm": 0.589672,
+          "score_final": 0.149335,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 8,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.183367,
+          "authority_norm": 0.50702,
+          "score_final": 0.147246,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 9,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 10,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 11,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.138178,
+          "authority_norm": 0.034913,
+          "score_final": 0.041527,
+          "relevante": false
+        }
+      ],
+      "ranking_depois": [
+        {
+          "posicao_depois": 1,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_final": 0.859559,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.859559,
+          "relevante": true
+        },
+        {
+          "posicao_depois": 2,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_final": 0.752557,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.752557,
+          "relevante": true
+        },
+        {
+          "posicao_depois": 3,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_final": 0.552637,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.552637,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 4,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_final": 0.476556,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.476556,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 5,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_final": 0.379467,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.379467,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 6,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_final": 0.309559,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.309559,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 7,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_final": 0.149335,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.149335,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 8,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_final": 0.092453,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 9,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_final": 0.092453,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 10,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_final": 0.147246,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.073623,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 11,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_final": 0.041527,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.041527,
+          "relevante": false
+        }
+      ],
+      "comparacao": [
+        {
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "posicao_antes": 1,
+          "posicao_depois": 1,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.859559,
+          "score_final_seguro": 0.859559
+        },
+        {
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "posicao_antes": 2,
+          "posicao_depois": 2,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.752557,
+          "score_final_seguro": 0.752557
+        },
+        {
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "posicao_antes": 3,
+          "posicao_depois": 3,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.552637,
+          "score_final_seguro": 0.552637
+        },
+        {
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "posicao_antes": 4,
+          "posicao_depois": 4,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.476556,
+          "score_final_seguro": 0.476556
+        },
+        {
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "posicao_antes": 5,
+          "posicao_depois": 5,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.379467,
+          "score_final_seguro": 0.379467
+        },
+        {
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "posicao_antes": 6,
+          "posicao_depois": 6,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.309559,
+          "score_final_seguro": 0.309559
+        },
+        {
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "posicao_antes": 7,
+          "posicao_depois": 7,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.149335,
+          "score_final_seguro": 0.149335
+        },
+        {
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "posicao_antes": 9,
+          "posicao_depois": 8,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.092453,
+          "score_final_seguro": 0.092453
+        },
+        {
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "posicao_antes": 10,
+          "posicao_depois": 9,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.092453,
+          "score_final_seguro": 0.092453
+        },
+        {
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "posicao_antes": 8,
+          "posicao_depois": 10,
+          "mudanca": -2,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.147246,
+          "score_final_seguro": 0.073623
+        },
+        {
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "posicao_antes": 11,
+          "posicao_depois": 11,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.041527,
+          "score_final_seguro": 0.041527
+        }
+      ],
+      "precisao": [
+        {
+          "ranking": "somente texto",
+          "top3": "G, F, C",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        },
+        {
+          "ranking": "texto + links (antes)",
+          "top3": "G, F, D",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        },
+        {
+          "ranking": "texto + links + melhoria (depois)",
+          "top3": "G, F, D",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        }
+      ]
+    },
+    {
+      "nome": "Harry Potter: livro e filme",
+      "consulta": "harry potter livro filme",
+      "relevantes": [
+        "D",
+        "E"
+      ],
+      "ranking_texto": [
+        {
+          "posicao_texto": 1,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto": 0.339829,
+          "relevante": true
+        },
+        {
+          "posicao_texto": 2,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto": 0.252518,
+          "relevante": true
+        },
+        {
+          "posicao_texto": 3,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto": 0.238703,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 4,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto": 0.068674,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 5,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto": 0.067457,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 6,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto": 0.062054,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 7,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 8,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 9,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 10,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto": 0.0,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 11,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto": 0.0,
+          "relevante": false
+        }
+      ],
+      "ranking_antes": [
+        {
+          "posicao_antes": 1,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto_norm": 1.0,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 1.0,
+          "relevante": true
+        },
+        {
+          "posicao_antes": 2,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto_norm": 0.743072,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.718249,
+          "relevante": true
+        },
+        {
+          "posicao_antes": 3,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto_norm": 0.70242,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.69589,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 4,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto_norm": 0.198503,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 0.559177,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 5,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto_norm": 0.182604,
+          "pagerank_norm": 0.843606,
+          "authority_norm": 0.862282,
+          "score_final": 0.48379,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 6,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto_norm": 0.202083,
+          "pagerank_norm": 0.819175,
+          "authority_norm": 0.357666,
+          "score_final": 0.387472,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 7,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.125604,
+          "authority_norm": 0.589672,
+          "score_final": 0.149335,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 8,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.183367,
+          "authority_norm": 0.50702,
+          "score_final": 0.147246,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 9,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 10,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 11,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto_norm": 0.0,
+          "pagerank_norm": 0.138178,
+          "authority_norm": 0.034913,
+          "score_final": 0.041527,
+          "relevante": false
+        }
+      ],
+      "ranking_depois": [
+        {
+          "posicao_depois": 1,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_final": 1.0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 1.0,
+          "relevante": true
+        },
+        {
+          "posicao_depois": 2,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_final": 0.718249,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.718249,
+          "relevante": true
+        },
+        {
+          "posicao_depois": 3,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_final": 0.69589,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.69589,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 4,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_final": 0.559177,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.559177,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 5,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_final": 0.48379,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.48379,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 6,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_final": 0.387472,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.387472,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 7,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_final": 0.149335,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.149335,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 8,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_final": 0.092453,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 9,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_final": 0.092453,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.092453,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 10,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_final": 0.147246,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.073623,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 11,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_final": 0.041527,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.041527,
+          "relevante": false
+        }
+      ],
+      "comparacao": [
+        {
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "posicao_antes": 1,
+          "posicao_depois": 1,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 1.0,
+          "score_final_seguro": 1.0
+        },
+        {
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "posicao_antes": 2,
+          "posicao_depois": 2,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.718249,
+          "score_final_seguro": 0.718249
+        },
+        {
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "posicao_antes": 3,
+          "posicao_depois": 3,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.69589,
+          "score_final_seguro": 0.69589
+        },
+        {
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "posicao_antes": 4,
+          "posicao_depois": 4,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.559177,
+          "score_final_seguro": 0.559177
+        },
+        {
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "posicao_antes": 5,
+          "posicao_depois": 5,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.48379,
+          "score_final_seguro": 0.48379
+        },
+        {
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "posicao_antes": 6,
+          "posicao_depois": 6,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.387472,
+          "score_final_seguro": 0.387472
+        },
+        {
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "posicao_antes": 7,
+          "posicao_depois": 7,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.149335,
+          "score_final_seguro": 0.149335
+        },
+        {
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "posicao_antes": 9,
+          "posicao_depois": 8,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.092453,
+          "score_final_seguro": 0.092453
+        },
+        {
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "posicao_antes": 10,
+          "posicao_depois": 9,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.092453,
+          "score_final_seguro": 0.092453
+        },
+        {
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "posicao_antes": 8,
+          "posicao_depois": 10,
+          "mudanca": -2,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.147246,
+          "score_final_seguro": 0.073623
+        },
+        {
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "posicao_antes": 11,
+          "posicao_depois": 11,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.041527,
+          "score_final_seguro": 0.041527
+        }
+      ],
+      "precisao": [
+        {
+          "ranking": "somente texto",
+          "top3": "D, E, G",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        },
+        {
+          "ranking": "texto + links (antes)",
+          "top3": "D, E, G",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        },
+        {
+          "ranking": "texto + links + melhoria (depois)",
+          "top3": "D, E, G",
+          "acertos": 2,
+          "precision@3": 0.6667,
+          "lista_rasa_no_top3": false
+        }
+      ]
+    },
+    {
+      "nome": "Melhores adaptações de livros",
+      "consulta": "melhores adaptações de livros para filme",
+      "relevantes": [
+        "I"
+      ],
+      "ranking_texto": [
+        {
+          "posicao_texto": 1,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto": 0.390354,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 2,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto": 0.319529,
+          "relevante": true
+        },
+        {
+          "posicao_texto": 3,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto": 0.276994,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 4,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto": 0.254266,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 5,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto": 0.198212,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 6,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto": 0.155855,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 7,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto": 0.112526,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 8,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto": 0.089373,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 9,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto": 0.047416,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 10,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto": 0.032808,
+          "relevante": false
+        },
+        {
+          "posicao_texto": 11,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto": 0.032385,
+          "relevante": false
+        }
+      ],
+      "ranking_antes": [
+        {
+          "posicao_antes": 1,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_texto_norm": 0.709595,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.699836,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 2,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_texto_norm": 1.0,
+          "pagerank_norm": 0.183367,
+          "authority_norm": 0.50702,
+          "score_final": 0.697246,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 3,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_texto_norm": 0.818561,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.542662,
+          "relevante": true
+        },
+        {
+          "posicao_antes": 4,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_texto_norm": 0.399266,
+          "pagerank_norm": 0.952103,
+          "authority_norm": 0.357666,
+          "score_final": 0.529155,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 5,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_texto_norm": 0.228954,
+          "pagerank_norm": 0.843606,
+          "authority_norm": 0.862282,
+          "score_final": 0.509283,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 6,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_texto_norm": 0.651373,
+          "pagerank_norm": 0.125604,
+          "authority_norm": 0.589672,
+          "score_final": 0.50759,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 7,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_texto_norm": 0.084047,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 0.496226,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 8,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_texto_norm": 0.082963,
+          "pagerank_norm": 1.0,
+          "authority_norm": 1.0,
+          "score_final": 0.49563,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 9,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_texto_norm": 0.288265,
+          "pagerank_norm": 0.819175,
+          "authority_norm": 0.357666,
+          "score_final": 0.434873,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 10,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_texto_norm": 0.507775,
+          "pagerank_norm": 0.138178,
+          "authority_norm": 0.034913,
+          "score_final": 0.320803,
+          "relevante": false
+        },
+        {
+          "posicao_antes": 11,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_texto_norm": 0.121468,
+          "pagerank_norm": 0.102114,
+          "authority_norm": 0.334625,
+          "score_final": 0.159261,
+          "relevante": false
+        }
+      ],
+      "ranking_depois": [
+        {
+          "posicao_depois": 1,
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "score_final": 0.542662,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 1,
+          "score_final_seguro": 0.705461,
+          "relevante": true
+        },
+        {
+          "posicao_depois": 2,
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "score_final": 0.699836,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.699836,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 3,
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "score_final": 0.529155,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.529155,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 4,
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "score_final": 0.509283,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.509283,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 5,
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "score_final": 0.50759,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.50759,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 6,
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "score_final": 0.496226,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.496226,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 7,
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "score_final": 0.49563,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.49563,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 8,
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "score_final": 0.434873,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.434873,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 9,
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "score_final": 0.320803,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 1,
+          "score_final_seguro": 0.417044,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 10,
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "score_final": 0.697246,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.348623,
+          "relevante": false
+        },
+        {
+          "posicao_depois": 11,
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "score_final": 0.159261,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final_seguro": 0.159261,
+          "relevante": false
+        }
+      ],
+      "comparacao": [
+        {
+          "id": "I",
+          "titulo": "Blog de Curadoria Literária",
+          "posicao_antes": 3,
+          "posicao_depois": 1,
+          "mudanca": 2,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 1,
+          "score_final": 0.542662,
+          "score_final_seguro": 0.705461
+        },
+        {
+          "id": "G",
+          "titulo": "Resenha: Duna (filme 2021)",
+          "posicao_antes": 1,
+          "posicao_depois": 2,
+          "mudanca": -1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.699836,
+          "score_final_seguro": 0.699836
+        },
+        {
+          "id": "E",
+          "titulo": "Resenha: Harry Potter (filmes)",
+          "posicao_antes": 4,
+          "posicao_depois": 3,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.529155,
+          "score_final_seguro": 0.529155
+        },
+        {
+          "id": "B",
+          "titulo": "Resenha: O Hobbit (livro)",
+          "posicao_antes": 5,
+          "posicao_depois": 4,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.509283,
+          "score_final_seguro": 0.509283
+        },
+        {
+          "id": "K",
+          "titulo": "Notícias de Adaptações 2026",
+          "posicao_antes": 6,
+          "posicao_depois": 5,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.50759,
+          "score_final_seguro": 0.50759
+        },
+        {
+          "id": "D",
+          "titulo": "Resenha: Harry Potter e a Pedra Filosofal (livro)",
+          "posicao_antes": 7,
+          "posicao_depois": 6,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.496226,
+          "score_final_seguro": 0.496226
+        },
+        {
+          "id": "F",
+          "titulo": "Resenha: Duna (livro)",
+          "posicao_antes": 8,
+          "posicao_depois": 7,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.49563,
+          "score_final_seguro": 0.49563
+        },
+        {
+          "id": "C",
+          "titulo": "Resenha: O Hobbit (trilogia de filmes)",
+          "posicao_antes": 9,
+          "posicao_depois": 8,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.434873,
+          "score_final_seguro": 0.434873
+        },
+        {
+          "id": "A",
+          "titulo": "Portal Livros & Telas",
+          "posicao_antes": 10,
+          "posicao_depois": 9,
+          "mudanca": 1,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 1,
+          "score_final": 0.320803,
+          "score_final_seguro": 0.417044
+        },
+        {
+          "id": "H",
+          "titulo": "Top 10 Adaptações de Livros",
+          "posicao_antes": 2,
+          "posicao_depois": 10,
+          "mudanca": -8,
+          "lista_rasa": 1,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.697246,
+          "score_final_seguro": 0.348623
+        },
+        {
+          "id": "J",
+          "titulo": "Loja Livros & Filmes",
+          "posicao_antes": 11,
+          "posicao_depois": 11,
+          "mudanca": 0,
+          "lista_rasa": 0,
+          "bonus_conteudo_esquecido": 0,
+          "score_final": 0.159261,
+          "score_final_seguro": 0.159261
+        }
+      ],
+      "precisao": [
+        {
+          "ranking": "somente texto",
+          "top3": "H, I, G",
+          "acertos": 1,
+          "precision@3": 0.3333,
+          "lista_rasa_no_top3": true
+        },
+        {
+          "ranking": "texto + links (antes)",
+          "top3": "G, H, I",
+          "acertos": 1,
+          "precision@3": 0.3333,
+          "lista_rasa_no_top3": true
+        },
+        {
+          "ranking": "texto + links + melhoria (depois)",
+          "top3": "I, G, E",
+          "acertos": 1,
+          "precision@3": 0.3333,
+          "lista_rasa_no_top3": false
+        }
+      ]
+    }
+  ]
+}
